@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>Are you having an affair</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/app.css" />"
+</head>
+<body>
+  <div class="container" ng-controller="AffairController">
+      <div class="header">
+        <h3 class="text-muted">Affair?</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1>Cheat?</h1>
+        <p class="lead">Enter a mobile number to find out if the person it belongs to is having an affair</p>
+            <form name="affairForm">
+            <div class="input-group">
+              
+              <input type="text" name="mobilenumber" class="form-control" required ng-model="mobile">
+              <span class="input-group-btn">
+              <button ng-click="checkAffair()" class="btn btn-danger" type="button">Check!</button>
+              </span>
+            </div><!-- /input-group -->
+            </form>
+      </div>
+
+      <div ng-show="isHavingAffair" class="jumbotron">
+        <h1>YES</h1>
+        <p class="lead">You've been bad!! Buy our booklet now to learn how to keep it a secret</p>
+    </div>
+  </div> <!-- /container -->
+
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+</body>
+</html>
